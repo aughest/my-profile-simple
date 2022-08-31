@@ -4,23 +4,41 @@
 
 body{
   font-family: "Open Sans", sans-serif;
-  background-color: rgb(252, 252, 252);
+  background: #ddd;
+
+}
+
+.container{
+  display: flex;
+  /* justify-content: center; */
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.card{
+  background: #fff;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.left-content{
+  width: 60%;
 }
 
 .content{  
   /* width: 800px; */
-  margin: 0 auto;
-  padding: 30px;
+  /* margin: 0 auto; */
+  /* padding: 30px; */
 }
 
 .introduction {
   display: flex;
   justify-content: center;
-  height: 350px;
+  /* height: 350px; */
 }
 
 .introduction .content{
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,12 +75,26 @@ body{
   color: rgb(0, 0, 0);
 }
 
+.biodata .content .list-biodata p{
+  text-align: right;
+}
+
 .biodata strong{
   margin-right: 2rem;
 }
 
 .break-line{
-  margin: 0 5rem;
+  margin: 1rem 0;
   height: 2px;
   background-color: rgb(201, 201, 201);
+}
+
+@media only screen and (max-width: 900px) {
+  .container{
+    flex-direction: column;
+  }
+
+  .left-content{
+    width: 100%;
+  }
 }
